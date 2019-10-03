@@ -4,7 +4,7 @@
 int main() {
 	int size=0, index=0, index1=0, i;
 	printf("ukazite razmer mnozestva:\n");
-    size=getchar();
+    scanf("%d",&size);
     int a[size];
     for(i = 0; i <= size; i++)
     {
@@ -20,22 +20,17 @@ int main() {
             break;
         }
     }
-    for (i = index; i < size-1; i++) {
+    size--;
+    for (i = index; i < size; i++) {
         a[i] = a[i+1];
     }
-    for (i = 0; i < size-1; i++) {
+    for (i = 0; i < size; i++) {
         printf("(%d)=%d ", i, a[i]);
     }
-   
-    while (2) {
         printf("\n ukazite elemnt dlya prilenia ");
         scanf("%d", &index1);
-        if (index1 > 0 && index1 < size) {
-            break;
-        }
-    }
-    a[size]=index1;
-    for (i = 0; i < size-1; i++) {
+        a[size++]=index1;
+    for (i = 0; i < size++; i++) {
         printf("(%d)=%d ", i, a[i]);
     }
     
